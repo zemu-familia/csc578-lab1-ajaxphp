@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#fname").keyup(function(){
+      var input = $("#fname").val();
+      $("#suggestions").load("getdata.php?q=" + input);
+    })
+  })
+</script>
+</head>
+<body>
+  <p><b>Start typing a name in the input field below:</b></p>
+  <form action="">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"/>
+  </form>
+  <p>Suggestions: <span id="txtHint"></span></p>
+  <select id='suggestions' name='suggestions'>
+</body>
+</html> 
